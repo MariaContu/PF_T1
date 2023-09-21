@@ -7,4 +7,5 @@ Exemplo: dec2bin 2 8 = [0,0,0,0,0,0,1,0]
 -}
 
 dec2bin :: Int -> Int -> [Int]
-dec2bin 0 0 = [] -- lista vazia
+dec2bin _ 0 = []
+dec2bin n bits = dec2bin (n `div` 2) (bits - 1) ++ [n `mod` 2]

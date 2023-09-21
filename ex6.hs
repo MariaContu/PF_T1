@@ -7,3 +7,4 @@ de binário fracionado com 16 bits) de um número binário de ponto fixo com
 Modelo de função: bin2frac :: ([Int],[Int]) -> Double
 Exemplo: bin2frac ([0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0],[1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0]) = 16392.625
 -}
+
