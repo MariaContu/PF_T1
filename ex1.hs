@@ -1,5 +1,5 @@
 {- 
-Exercicio 1: Definir uma função recursiva que recebe
+Definir uma função recursiva que recebe
 um número binário (interpretado como número inteiro sem sinal)
 e retorna o valor equivalente em decimal. 
 Modelo de função: bin2dec :: [Int] -> Int 
