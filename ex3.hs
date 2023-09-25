@@ -8,11 +8,13 @@ Exemplo: bincompl2dec [1,0,1,0] = -6
 
 bincompl2dec :: [Int] -> Int
 bincompl2dec [] = 0
-bincompl2dec (bit:bits)
---primeiro descobrimos se é positivo ou negativo
-    | bit == 1 = (-1) * complementoDois bits
-    | otherwise = 1 * complementoDois bits
+bincompl2dec xs
+    | head xs == 0 = bin2dec xs
+    | head xs == 1 = (-1) * (bin2dec (inverteBits xs) + 1)
 
-complementoDois :: [Int] -> Int
-complementoDois [] = 0
-complementoDois (bit:bits) = bit * (2 ^length bits) + complementoDois bits
+bin2dec :: [Int] -> Int
+bin2dec [] = 0
+bin2dec (x:xs) = x * 2^length xs + bin2dec xs
+
+inverteBits :: [Int] -> [Int]
+inverteBits = map (\x -> if x == 0 then 1 else 0)
