@@ -11,7 +11,7 @@ dec2bincompl :: Int -> Int -> [Int]
 dec2bincompl 0 0 = [0]
 dec2bincompl 0 n = replicate n 0
 dec2bincompl x y 
-    | x<0 = inverteBits(dec2bin (abs x -1) y)
+    | x<0 = inverteBits(dec2bin (abs x-1) y)
     | otherwise = dec2bin (abs x) y
 
 dec2bin :: Int -> Int -> [Int]
