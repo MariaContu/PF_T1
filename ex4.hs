@@ -20,3 +20,9 @@ dec2bin n bits = dec2bin (n `div` 2) (bits - 1) ++ [n `mod` 2]
 
 inverteBits :: [Int] -> [Int]
 inverteBits = map (\x -> if x == 0 then 1 else 0)
+
+{-
+Teste1: dec2bincompl (-2) 8 Espera: [1,1,1,1,1,1,1,0]
+Teste2: dec2bincompl 6 8 Espera: [0,0,0,0,0,1,1,0]
+Teste3: dec2bincompl (-9) 17 Espera: [1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1]
+-}

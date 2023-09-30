@@ -18,3 +18,9 @@ bin2dec (x:xs) = x * 2^length xs + bin2dec xs
 
 inverteBits :: [Int] -> [Int]
 inverteBits = map (\x -> if x == 0 then 1 else 0)
+
+{-
+Teste1: bincompl2dec [1,0,1,0] Espera: -6
+Teste2: bincompl2dec [1,1,1,1] Espera: -1 
+Teste3: bincompl2dec [0,1,1,0,1,0] Espera: 26
+-}
